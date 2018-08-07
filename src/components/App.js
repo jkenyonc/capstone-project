@@ -30,7 +30,6 @@ class App extends Component {
       <Router>
         <div className="App">
           <TopAppBar />
-          <Link to="/submitpost">Submit a Post</Link>
           <Route exact path="/" component={CardList} />
           <Route path="/post/:postid" component={PostDetail}/>
           <Route path="/submitpost" render={() => (<NewPostForm onPost={this.postData}/>)} />
