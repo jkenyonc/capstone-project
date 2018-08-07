@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import "../styles/TopAppBar.css";
 
 class TopAppBar extends Component {
   render() {
