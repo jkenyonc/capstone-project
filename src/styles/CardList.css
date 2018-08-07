@@ -3,10 +3,42 @@
   list-style-type: none;
   display: flex;
   flex-direction: column;
+  padding: 10px;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+/* content card */
+.content-card {
+  border: 1px solid var(--blue);
+  border-radius: 5px;
+  background-color: whitesmoke;
+  margin: 5px;
+  padding: 5px;
+
+  display: grid;
+  grid-template-areas:
+  "title"
+  "author"
+  "content"
+  "action"
 }
 
+.post-title {
+  color: black;
+  text-decoration: none;
+  font-family: cursive;
+  grid-area: title;
+}
 
+.post-content {
+  grid-area: content
+}
 
+.post-author {
+  grid-area: author
+}
 
+.post-button {
+  grid-area: action;
+}
 
-/* content card */

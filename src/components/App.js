@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import '../styles/App.css';
 import CardList from './Homepage/CardList';
 import TopAppBar from './TopAppBar';
-import {BrowserRouter as Router, Route, Link} from "react-router-dom"
+import {BrowserRouter as Router, Route } from "react-router-dom"
 import PostDetail from './PostDetail';
 import NewPostForm from './NewPostForm';
 
