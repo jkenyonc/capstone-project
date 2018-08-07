@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import ContentCard from "./ContentCard"
+import {Link} from 'react-router-dom' 
+import "../../styles/CardList.css"
+
 class CardList extends Component {
 	state = {
 		isLoading: true,
@@ -26,9 +29,12 @@ class CardList extends Component {
   render() {
 		const { posts } = this.state;
     return (
-      <div>
-        {posts.map((post) => <ContentCard post={post} key={post.id}/>)}      
-      </div>
+      <React.Fragment>
+        <Link to="/submitpost">Submit a Post</Link>
+        <ul className="list-container">
+          {posts.map((post) => <ContentCard post={post} key={post.id}/>)}
+        </ul>      
+      </React.Fragment>
     );
   }
 }

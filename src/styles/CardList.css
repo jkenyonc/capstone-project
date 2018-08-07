@@ -1,0 +1,12 @@
+/* card list */
+.list-container {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+
+
+/* content card */

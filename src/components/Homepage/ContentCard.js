@@ -6,12 +6,12 @@ class ContentCard extends Component {
   render() {
     const {post} = this.props
     return (
-      <div className="content-card">
+      <li className="content-card">
         <Link to={`/post/${post.id}`}><h3>{post.title}</h3></Link>
         <div>by: {post.user}</div>
         <p>{post.body}</p>
         <Route path={`/post/:postid`} component={PostDetail}/>
-      </div>
+      </li>
     );
   }
 }
