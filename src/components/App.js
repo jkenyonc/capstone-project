@@ -11,8 +11,6 @@ class App extends Component {
     currentUser: "joelchristensen"
   }
   postData = (data={}, url=``) => {
-    //easily change location of api
-    const fullUrl= "/"+"url"
     const finalData = {...data, user: this.state.currentUser, date: new Date()}
     return fetch(url, {
       method: "POST",
