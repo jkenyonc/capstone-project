@@ -1,0 +1,30 @@
+.App-header {
+    background-color: var(--blue);
+    display: flex;
+    justify-content: space-around;
+    height: 60px;
+}
+
+.App-title {
+    color: var(--gray);
+    font-family: 'Indie Flower', cursive;
+    font-size: 40px;
+    padding: none;
+    align-items: center;
+}
+
+.App-searchbar {
+    flex-basis: 40%;
+    text-align: center;
+    height: 30px;
+    align-self: center;
+}
+
+.App-account {
+    font-family: 'Titillium Web', sans-serif;
+    color: var(--gray);
+    font-size: 20px;
+    align-self: center;
+    border: none;
+    background-color: var(--blue);
+}
