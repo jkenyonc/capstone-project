@@ -6,9 +6,12 @@ class TopAppBar extends Component {
     return (
       <header className="App-header">
         <div className="App-title">Tubular</div>
-        <input type="text" className="App-searchbar" placeholder={"🔎 search"}  />
-        <button className="App-account">Sign in</button>
-        <button className="App-account">Log in</button>
+        <div className="container-1">
+          <i className="fas fa-search"></i>
+          <input type="search" className="App-searchbar" placeholder={"  Search"}  />
+        </div>
+        <button className="App-account App-account_signup">Sign in</button>
+        <button className="App-account App-account_login">Log in</button>
       </header>
     );
   }
