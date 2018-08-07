@@ -20,7 +20,7 @@ class NewPostForm extends Component {
 	}
 	render() {
 		return (
-			<div>
+			<div className="NewPostForm">
 				<form onSubmit={this.handleSubmit}>
 					<label htmlFor="post-title">Title: </label>
 					<input type="text" name="title" id="post-title" value={this.state.title} onChange={this.handleChange} /> <br />
