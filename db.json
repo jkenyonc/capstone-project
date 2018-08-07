@@ -1,0 +1,19 @@
+{
+  "posts": [
+    {
+      "title": "Test Post Please Ignore",
+      "link": "https://reddit.com",
+      "user": "joelchristensen",
+      "date": "2018-08-07T16:24:33.726Z",
+      "id": 1
+    },
+    {
+      "title": "Post 2 ",
+      "link": "http://google.com",
+      "user": "joelchristensen",
+      "date": "2018-08-07T16:28:57.722Z",
+      "id": 2
+    }
+  ],
+  "comments": []
+}
