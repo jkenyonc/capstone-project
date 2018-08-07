@@ -32,7 +32,7 @@ class CardList extends Component {
       <React.Fragment>
         <Link to="/submitpost">Submit a Post</Link>
         <ul className="list-container">
-        {posts.map((post) => <ContentCard post={post} key={post.id}/>)}      
+          {posts.map((post) => <ContentCard post={post} key={post.id}/>)}
         </ul>      
       </React.Fragment>
     );
