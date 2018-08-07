@@ -8,7 +8,7 @@ class ContentCard extends Component {
     return (
       <div className="content-card">
         <Link to={`/post/${post.id}`}><h3>{post.title}</h3></Link>
-        <div>by: {post.userId}</div>
+        <div>by: {post.user}</div>
         <p>{post.body}</p>
         <Route path={`/post/:postid`} component={PostDetail}/>
       </div>

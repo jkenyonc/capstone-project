@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { METHODS } from 'http';
 
 class NewPostForm extends Component {
 	state = {
@@ -17,11 +16,7 @@ class NewPostForm extends Component {
 	}
 	handleSubmit = (event) => {
 		event.preventDefault()
-		const finalPostData = {
-			...this.state.post,
-			date: new Date(),
-		}
-		this.setState({post: finalPostData})
+		this.props.onPost(this.state.post, "posts")
 	}
 	render() {
 		return (

@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Comment from './Comment';
+import TimeAgo from 'timeago-react'
 
 class PostDetail extends Component {
   state= {
@@ -31,8 +32,10 @@ class PostDetail extends Component {
       <div>
         <h1>{post.title}</h1>
         <p>{post.body}</p>
-        {/* <hr />
-        <h3>Comments</h3> */}
+        <br />
+        <i>submitted by {post.user} <TimeAgo datetime={post.date} /></i>
+        <hr />
+        <h3>Comments</h3>
         <ul>{comments.map((comment) => (<Comment content={comment} key={comment.id}/>))}</ul>
       </div>
   );
