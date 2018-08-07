@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 class Comment extends Component {
 	render() {
-		console.log(this.props.content)
 		const {name, body, email} = this.props.content
 		return (
 			<li style={tempCommentStyle}>

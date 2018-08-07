@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class VoteButtons extends Component {
-    render() {
-        return (
-            <div>
-                <i>⇧</i>
-            </div>
-        );
-    }
+  render() {
+    return (
+      <div>
+        <i>⇧</i>
+      </div>
+    );
+  }
 }
 
 export default VoteButtons;

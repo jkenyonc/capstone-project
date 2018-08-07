@@ -31,8 +31,8 @@ class PostDetail extends Component {
       <div>
         <h1>{post.title}</h1>
         <p>{post.body}</p>
-        <hr />
-        <h3>Comments</h3>
+        {/* <hr />
+        <h3>Comments</h3> */}
         <ul>{comments.map((comment) => (<Comment content={comment} key={comment.id}/>))}</ul>
       </div>
   );
