@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import "../styles/NewPostForm.css";
 class NewPostForm extends Component {
 	state = {
 		post: {
@@ -20,7 +20,7 @@ class NewPostForm extends Component {
 	}
 	render() {
 		return (
-			<div className="NewPostForm">
+			<div className="NewPost">
 				<form onSubmit={this.handleSubmit}>
 					<label htmlFor="post-title">Title: </label>
 					<input type="text" name="title" id="post-title" value={this.state.title} onChange={this.handleChange} /> <br />
