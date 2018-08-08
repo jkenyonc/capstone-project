@@ -24,7 +24,7 @@ class NewPostForm extends Component {
       <div className="NewPostForm">
         <form onSubmit={this.handleSubmit}>
           <fieldset>
-						<legend>Title</legend>
+						<legend className="titleAndLink">Title</legend>
             <label htmlFor="post-title">Give your post an engaging title</label>
             <input
               type="text"
@@ -35,7 +35,7 @@ class NewPostForm extends Component {
             />
           </fieldset>
           <fieldset>
-            <legend>Link</legend>
+            <legend className="titleAndLink">Link</legend>
             <label htmlFor="post-link">Add a link to your post.</label>
             <input
               required
@@ -46,7 +46,7 @@ class NewPostForm extends Component {
               onChange={this.handleChange}
             />
           </fieldset>
-          <input type="submit" value="Submit Post" />
+          <input type="submit" value="Submit Post" className="submit"/>
         </form>
       </div>
     );

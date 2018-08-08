@@ -7,6 +7,12 @@
 }
 
 .App {
+  background: var(--blue);
+  height: 100vh;
+}
+
+.hr {
+  color: var(--wenge);
 }
 
 .App-logo {
