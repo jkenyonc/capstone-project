@@ -14,7 +14,8 @@ class App extends Component {
     const finalData = {
       ...data,
       user: this.state.currentUser,
-      date: new Date()
+      date: new Date(),
+      score: 1
     };
     return fetch(url, {
       method: "POST",
@@ -27,22 +28,35 @@ class App extends Component {
       body: JSON.stringify(finalData)
     })
       .then(response => response.json())
-      .then(response => this.setState({response: response}))
+      .then(response => this.setState({ response: response }))
       .catch(error => console.error(`Fetch Error =\n`, error));
+  };
+  handleVote = () => {
+    console.log("upvoted");
   };
   render() {
     return (
       <Router>
         <div className="App">
           <TopAppBar />
-          <Route exact path="/" component={CardList} />
+          <Route
+            exact
+            path="/"
+            render={({ match }) => (
+              <CardList onVote={this.handleVote} />
+            )}
+          />
           <Route
             path="/post/:postid"
-            render={({match}) => <PostDetail match={match} onComment={this.postData} />}
+            render={({ match }) => (
+              <PostDetail match={match} onComment={this.postData} />
+            )}
           />
           <Route
             path="/submitpost"
-            render={({match}) => <NewPostForm match={match} onPost={this.postData} />}
+            render={({ match }) => (
+              <NewPostForm match={match} onPost={this.postData} />
+            )}
           />
         </div>
       </Router>

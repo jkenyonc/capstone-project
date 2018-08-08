@@ -21,7 +21,8 @@ class PostActions extends Component {
           buttons={[
             { text: "Comments", icon: "comments" },
             { text: "Bookmark", icon: "bookmark" },
-            { text: "Hide", icon: "eye-slash"}
+            { text: "Hide", icon: "eye-slash" },
+            { text: "Delete", icon: "delete" }
           ]}
         />
       </div>

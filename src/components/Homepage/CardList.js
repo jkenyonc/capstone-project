@@ -24,7 +24,11 @@ class CardList extends Component {
 
 	componentDidMount() {
 		this.fetchPosts()
-	}
+  }
+  
+  handleVote = vote => {
+    this.props.onVote({...vote, content: "post"})
+  }
 	
   render() {
 		const { posts } = this.state;
@@ -32,7 +36,7 @@ class CardList extends Component {
       <React.Fragment>
         <Link to="/submitpost">Submit a Post</Link>
         <ul className="list-container">
-          {posts.map((post) => <ContentCard post={post} key={post.id}/>)}
+          {posts.map((post) => <ContentCard onVote={this.handleVote} post={post} key={post.id}/>)}
         </ul>      
       </React.Fragment>
     );
