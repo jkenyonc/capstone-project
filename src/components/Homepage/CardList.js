@@ -13,13 +13,13 @@ class CardList extends Component {
 	fetchPosts() {
     fetch(`/posts`)
       .then(response => response.json())
-      .then(data =>
+      .then(data => (
         this.setState({
           posts: data,
           isLoading: false,
         })
-      )
-      .catch(error => this.setState({ error, isLoading: false }));
+      ))
+      .catch(error => this.setState({ error, isLoading: false }))
 	}
 
 	componentDidMount() {

@@ -1,12 +1,15 @@
 import React, { Component } from "react";
+import FontAwesome from "react-fontawesome";
 
-class GenericActions extends Component {
+class ButtonActions extends Component {
   render() {
     const { buttons } = this.props;
-    const render = buttons.map(button => (
-      <button>{button.text}</button>
+    const buttongroup = buttons.map(button => (
+      <button key={button.text}>
+        <FontAwesome name={button.icon} /> {button.text}
+      </button>
     ));
-    return {};
+    return buttongroup;
   }
 }
 
@@ -14,8 +17,12 @@ class PostActions extends Component {
   render() {
     return (
       <div>
-        <GenericActions
-          buttons={[{ text: "Comment" }, { text: "Save" }, { text: 5 }]}
+        <ButtonActions
+          buttons={[
+            { text: "Comments", icon: "comments" },
+            { text: "Bookmark", icon: "bookmark" },
+            { text: "Hide", icon: "eye-slash"}
+          ]}
         />
       </div>
     );

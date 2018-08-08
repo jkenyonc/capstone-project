@@ -1,0 +1,11 @@
+form {
+    width:60%;
+    margin: auto;
+}
+fieldset {
+    background-color: whitesmoke;
+}
+
+fieldset:last-child {
+    padding-left: 1000px;;
+}
