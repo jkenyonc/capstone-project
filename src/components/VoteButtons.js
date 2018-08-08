@@ -3,9 +3,8 @@ import React, { Component } from "react";
 class VoteButtons extends Component {
   render() {
     return (
-      <div>
-        <i>⇧</i>
-      </div>
+      <button>Upvote</button>
+      <output>{this.props.score}</output>
     );
   }
 }

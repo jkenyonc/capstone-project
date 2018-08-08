@@ -15,5 +15,48 @@
       "id": 2
     }
   ],
-  "comments": []
+  "comments": [
+    {
+      "text": "test",
+      "user": "joelchristensen",
+      "date": "2018-08-08T04:31:25.801Z",
+      "postId": "1",
+      "id": 1
+    },
+    {
+      "text": "test",
+      "user": "joelchristensen",
+      "date": "2018-08-08T04:32:50.735Z",
+      "postId": "1",
+      "id": 2
+    },
+    {
+      "text": "test",
+      "user": "joelchristensen",
+      "date": "2018-08-08T04:32:51.551Z",
+      "postId": "1",
+      "id": 3
+    },
+    {
+      "text": "test",
+      "user": "joelchristensen",
+      "date": "2018-08-08T04:32:51.697Z",
+      "postId": "1",
+      "id": 4
+    },
+    {
+      "text": "test",
+      "user": "joelchristensen",
+      "date": "2018-08-08T04:32:51.843Z",
+      "postId": "1",
+      "id": 5
+    },
+    {
+      "text": "test",
+      "user": "joelchristensen",
+      "date": "2018-08-08T04:33:13.621Z",
+      "postId": "1",
+      "id": 6
+    }
+  ]
 }
