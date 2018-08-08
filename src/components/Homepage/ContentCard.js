@@ -6,7 +6,6 @@ import VoteButtons from "../VoteButtons";
 
 class ContentCard extends Component {
   handleVote = type => {
-    console.log(type)
     this.props.onVote({type, post: this.props.post});
   };
 
@@ -20,7 +19,7 @@ class ContentCard extends Component {
         <div className="post-author">by: {post.user}</div>
         <p className="post-content">{post.link}</p>
         <p className="post-content">{post.text}</p>
-        <VoteButtons onVote={this.handleVote} score={3} />
+        <VoteButtons onVote={this.handleVote} score={post.score} />
         <PostActions />
         <Route path={`/post/:postid`} component={PostDetail} />
       </li>

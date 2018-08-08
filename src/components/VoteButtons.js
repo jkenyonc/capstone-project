@@ -2,7 +2,6 @@ import React, { Component } from "react";
 
 class VoteButtons extends Component {
   handleVote = event => {
-    let voteInt;
     // switch (event.target.name) {
     //   case "voteUp": {
     //     voteInt = 1;
@@ -17,6 +16,7 @@ class VoteButtons extends Component {
     //     break;
     // }
     this.props.onVote(event.target.name)
+    console.log(event.target)
   }
   render() {
     return (

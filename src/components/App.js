@@ -8,9 +8,11 @@ import NewPostForm from "./NewPostForm";
 
 class App extends Component {
   state = {
-    currentUser: "joelchristensen"
+    currentUser: "joelchristensen",
+    posts: []
   };
   postData = (data = {}, url = ``) => {
+    const { posts } = this.state;
     const finalData = {
       ...data,
       user: this.state.currentUser,
@@ -28,11 +30,44 @@ class App extends Component {
       body: JSON.stringify(finalData)
     })
       .then(response => response.json())
-      .then(response => this.setState({ response: response }))
+      .then(response => this.setState({ posts: [...posts, response] }))
       .catch(error => console.error(`Fetch Error =\n`, error));
   };
-  handleVote = () => {
-    console.log("upvoted");
+  fetchPosts() {
+    fetch(`/posts`)
+      .then(response => response.json())
+      .then(data =>
+        this.setState({
+          posts: data
+        })
+      );
+  }
+
+  componentDidMount() {
+    this.fetchPosts();
+  }
+
+  handleVote = vote => {
+    console.log(vote);
+    const { posts } = this.state;
+    const { type, content, post } = vote;
+
+    let scorechange;
+    switch (type) {
+      case "voteUp":
+        scorechange = 1;
+        break;
+      case "voteDown":
+        scorechange = -1;
+        break;
+      default:
+        scorechange = 0;
+        break;
+    }
+
+    const newPost = { ...post, score: post.score + scorechange };
+    const newPostArray = [...posts];
+    this.setState({ posts: newPostArray });
   };
   render() {
     return (
@@ -43,7 +78,7 @@ class App extends Component {
             exact
             path="/"
             render={({ match }) => (
-              <CardList onVote={this.handleVote} />
+              <CardList data={this.state.posts} onVote={this.handleVote} />
             )}
           />
           <Route
@@ -54,9 +89,7 @@ class App extends Component {
           />
           <Route
             path="/submitpost"
-            render={({ match }) => (
-              <NewPostForm match={match} onPost={this.postData} />
-            )}
+            render={({ match }) => <NewPostForm onPost={this.postData} />}
           />
         </div>
       </Router>

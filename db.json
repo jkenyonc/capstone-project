@@ -1,62 +1,23 @@
 {
   "posts": [
     {
-      "title": "Test Post Please Ignore",
-      "link": "https://reddit.com",
+      "title": "Exciting News!",
+      "link": "http://www.theonion.com",
+      "images": [],
       "user": "joelchristensen",
-      "date": "2018-08-07T16:24:33.726Z",
+      "date": "2018-08-08T16:52:49.192Z",
+      "score": 1,
       "id": 1
     },
     {
-      "title": "Post 2 ",
+      "title": "Test Post Please Ignore",
       "link": "http://google.com",
+      "images": [],
       "user": "joelchristensen",
-      "date": "2018-08-07T16:28:57.722Z",
+      "date": "2018-08-08T16:58:00.870Z",
+      "score": 1,
       "id": 2
     }
   ],
-  "comments": [
-    {
-      "text": "test",
-      "user": "joelchristensen",
-      "date": "2018-08-08T04:31:25.801Z",
-      "postId": "1",
-      "id": 1
-    },
-    {
-      "text": "test",
-      "user": "joelchristensen",
-      "date": "2018-08-08T04:32:50.735Z",
-      "postId": "1",
-      "id": 2
-    },
-    {
-      "text": "test",
-      "user": "joelchristensen",
-      "date": "2018-08-08T04:32:51.551Z",
-      "postId": "1",
-      "id": 3
-    },
-    {
-      "text": "test",
-      "user": "joelchristensen",
-      "date": "2018-08-08T04:32:51.697Z",
-      "postId": "1",
-      "id": 4
-    },
-    {
-      "text": "test",
-      "user": "joelchristensen",
-      "date": "2018-08-08T04:32:51.843Z",
-      "postId": "1",
-      "id": 5
-    },
-    {
-      "text": "test",
-      "user": "joelchristensen",
-      "date": "2018-08-08T04:33:13.621Z",
-      "postId": "1",
-      "id": 6
-    }
-  ]
+  "comments": []
 }

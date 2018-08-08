@@ -1,43 +1,28 @@
-import React, { Component } from 'react';
-import ContentCard from "./ContentCard"
-import {Link} from 'react-router-dom' 
-import "../../styles/CardList.css"
+import React, { Component } from "react";
+import ContentCard from "./ContentCard";
+import { Link } from "react-router-dom";
+import "../../styles/CardList.css";
 
 class CardList extends Component {
-	state = {
-		isLoading: true,
-		posts: [],
-		error: null
-	}
+  state = {
+    isLoading: true,
+    error: null
+  };
 
-	fetchPosts() {
-    fetch(`/posts`)
-      .then(response => response.json())
-      .then(data => (
-        this.setState({
-          posts: data,
-          isLoading: false,
-        })
-      ))
-      .catch(error => this.setState({ error, isLoading: false }))
-	}
-
-	componentDidMount() {
-		this.fetchPosts()
-  }
-  
   handleVote = vote => {
-    this.props.onVote({...vote, content: "post"})
-  }
-	
+    this.props.onVote({ ...vote, content: "post" });
+  };
+
   render() {
-		const { posts } = this.state;
+    const data = this.props.data;
     return (
       <React.Fragment>
         <Link to="/submitpost">Submit a Post</Link>
         <ul className="list-container">
-          {posts.map((post) => <ContentCard onVote={this.handleVote} post={post} key={post.id}/>)}
-        </ul>      
+          {data.map((post) => (
+            <ContentCard onVote={this.handleVote} post={post} key={post.id} />
+          ))}
+        </ul>
       </React.Fragment>
     );
   }
