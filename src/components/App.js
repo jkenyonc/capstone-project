@@ -35,6 +35,7 @@ class App extends Component {
       <Router>
         <div className="App">
           <TopAppBar />
+          <hr className="hr"/>
           <Route exact path="/" component={CardList} />
           <Route
             path="/post/:postid"
