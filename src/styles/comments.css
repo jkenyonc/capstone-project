@@ -41,3 +41,18 @@
     padding: 5px;
     border-radius: 2px;
 }
+
+.write_comment {
+    font-family: var(--marker);
+}
+
+.text-field {
+    font-family: var(--simple);
+    background-color: var(--gray);
+}
+
+.submit {
+    background-color: var(--gray);
+    border: lightgray;
+    border-radius: 3px;
+}

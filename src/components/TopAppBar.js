@@ -7,7 +7,7 @@ class TopAppBar extends Component {
   render() {
     return (
       <header className="App-header">
-        <Link to="/"><div className="App-title">Tubular</div></Link>
+        <Link to="/" className="App-title"><div >Tubular</div></Link>
         <div className="container-1">
           <FontAwesome className="search-icon" name="search" />
           <input

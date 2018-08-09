@@ -55,10 +55,10 @@ class PostDetail extends Component {
         <h3>Comments</h3>
         <form onSubmit={this.handleSubmit}>
           <fieldset>
-            <legend>Write a Comment</legend>
-            <textarea onChange={this.handleChange} value={newcomment.text} cols="100" rows="10" />
+            <legend><div className="write_comment">Write a Comment</div></legend>
+            <textarea className="text_field" onChange={this.handleChange} value={newcomment.text} cols="100" rows="10" />
           </fieldset>
-          <input type="submit" value="Publish Comment" />
+          <input type="submit" value="Publish Comment" className="submit"/>
         </form>
         <ul>
           {comments.map(comment => (
