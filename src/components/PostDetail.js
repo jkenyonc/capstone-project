@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Comment from "./Comment";
 import TimeAgo from "timeago-react";
+import "../styles/comments.css";
 class PostDetail extends Component {
   constructor(props) {
     super(props);
@@ -44,9 +45,9 @@ class PostDetail extends Component {
     return (
       <div>
         <h1>{post.title}</h1>
-        <p>{post.body}</p>
+        <p className="comment-text">{post.body}</p>
         <br />
-        <i>
+        <i className="comment-user">
           submitted by {post.user} <TimeAgo datetime={post.date} />
         </i>
         <hr />

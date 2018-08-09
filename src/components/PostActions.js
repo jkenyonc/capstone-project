@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 import FontAwesome from "react-fontawesome";
+import "../styles/comments.css";
 
 class ButtonActions extends Component {
   render() {
     const { buttons } = this.props;
     const buttongroup = buttons.map(button => (
-      <button key={button.text}>
+      <button className="action_buttons" key={button.text}>
         <FontAwesome name={button.icon} /> {button.text}
       </button>
     ));
@@ -16,13 +17,13 @@ class ButtonActions extends Component {
 class PostActions extends Component {
   render() {
     return (
-      <div>
+      <div className="post-button">
         <ButtonActions
           buttons={[
             { text: "Comments", icon: "comments" },
             { text: "Bookmark", icon: "bookmark" },
             { text: "Hide", icon: "eye-slash" },
-            { text: "Delete", icon: "delete" }
+            { text: "Delete", icon: "trash-alt" }
           ]}
         />
       </div>

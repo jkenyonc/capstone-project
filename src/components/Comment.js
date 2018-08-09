@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import TimeAgo from "timeago-react";
 import VoteButtons from "./VoteButtons";
+import "../styles/comments.css";
 
 class Comment extends Component {
   render() {
@@ -8,8 +9,8 @@ class Comment extends Component {
     return (
       <li style={tempCommentStyle}>
         <VoteButtons onVote={() => console.log("voted on comment (WIP)")}/>
-        <p>{text}</p>
-        <i>submitted by {user} <TimeAgo datetime={date} /></i>
+        <p className="comment-text">{text}</p>
+        <i className="comment-user">submitted by {user} <TimeAgo datetime={date} /></i>
       </li>
     );
   }

@@ -17,28 +17,36 @@
 
   display: grid;
   grid-template-areas:
-  "title"
-  "author"
-  "content"
-  "action"
+  "title title"
+  "author author"
+  "content content"
+  "vote action"
 }
 
 .post-title {
   color: black;
   text-decoration: none;
-  font-family: cursive;
+  font-family: var(--simple);
   grid-area: title;
 }
 
 .post-content {
-  grid-area: content
+  grid-area: content;
+  font-family: var(--simple);
 }
 
 .post-author {
-  grid-area: author
+  grid-area: author;
+  font-family: var(--simple);
 }
 
 .post-button {
   grid-area: action;
+  /* margin-left: auto; */
+  text-align: right;
+}
+
+.vote-buttons {
+  grid-area: vote;
 }
 

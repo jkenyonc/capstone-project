@@ -1,0 +1,43 @@
+.comment-text {
+    font-family: var(--simple);
+    font-size: 12px;
+}
+
+.comment-user {
+    font-family: var(--simple);
+    font-size: 10px;
+}
+
+.vote_up {
+    border: none;
+    background-color: transparent;
+}
+
+.vote_down {
+    border: none;
+    background-color: transparent;
+}
+
+.vote_up.active {
+    color: red;
+    border: none;
+    background-color: transparent;
+}
+
+.vote_down.active {
+    color: red;
+    border: none;
+    background-color: transparent;
+}
+
+.action_buttons {
+    border: lightgrey;
+    background-color: transparent;
+    padding: 5px;
+}
+
+.action_buttons:hover {
+    background-color: rgba(0,0,0,0.2);
+    padding: 5px;
+    border-radius: 2px;
+}

@@ -4,6 +4,10 @@
   --white: #F3E0EC;
   --black: #272727;
   --wenge: #655560;
+
+  --simple: 'Titillium Web', sans-serif;
+  --marker: 'Permanent Marker', cursive;
+  --indie: 'Indie Flower', cursive;
 }
 
 .App {

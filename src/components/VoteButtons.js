@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "../styles/comments.css";
 
 class VoteButtons extends Component {
   handleVote = event => {
@@ -20,14 +21,14 @@ class VoteButtons extends Component {
   }
   render() {
     return (
-      <div>
-        <button name="voteUp" onClick={this.handleVote}>
-          Upvote
-        </button>
-        <button name="voteDown" onClick={this.handleVote}>
-          Downvote
+      <div className="vote-buttons">
+        <button name="voteUp" className="vote_up" onClick={this.handleVote} >
+          <i class="fas fa-caret-up"></i>
         </button>
         <output>{this.props.score}</output>
+        <button name="voteDown" className="vote_down" onClick={this.handleVote}>
+          <i class="fas fa-caret-down"></i>
+        </button>
       </div>
     );
   }
