@@ -5,14 +5,32 @@ import TopAppBar from "./TopAppBar";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import PostDetail from "./PostDetail";
 import NewPostForm from "./NewPostForm";
+import firebase from "@firebase/app";
+import "@firebase/firestore";
 
 class App extends Component {
-  state = {
-    currentUser: "joelchristensen",
-    posts: []
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      currentUser: "joelchristensen",
+      posts: []
+    }
+    firebase.initializeApp({
+      apiKey: "AIzaSyD7DDIPoxlG7QEu7J2j2WecqbqsHQ4Pj1M",
+      authDomain: "react-reddit-clone-36353.firebaseapp.com",
+      databaseURL: "https://react-reddit-clone-36353.firebaseio.com",
+      projectId: "react-reddit-clone-36353",
+      storageBucket: "react-reddit-clone-36353.appspot.com",
+      messagingSenderId: "528254341955"
+    })
+    
+  }
+  
   postData = (data = {}, url = ``) => {
+    
     const { posts } = this.state;
+    
+    
     const finalData = {
       ...data,
       user: this.state.currentUser,
@@ -44,7 +62,10 @@ class App extends Component {
   }
 
   componentDidMount() {
-    this.fetchPosts();
+    var db = firebase.firestore()
+    const postRef= db.collection("posts")
+    console.log(postRef)
+
   }
 
   handleVote = vote => {
